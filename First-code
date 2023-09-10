@@ -1,0 +1,92 @@
+import time
+print ("Welcome to Quick Quiz")
+time.sleep(0.5)
+print ("Loading....")
+time.sleep(0.8)
+x = ("Player Ready")
+y = ("Game Over!")
+z = ("You Are: Incorrect!")
+w = ("You Are: Correct!")
+score = 0
+name = input("Player Name Here: ")
+print ("Welcome " + name)
+time.sleep(0.5)
+birth_year = input("Enter Player YEAR of Birth: ")
+age = 2023 - int(birth_year)
+if age < 18:
+        time.sleep(0.5)
+        print ("You are %s" % age, "years old and cannot play from your cot")
+        time.sleep(0.5)
+        print (y)
+if age > 99:
+        print ("You are %s" % age, "years old and cannot play from grave!")
+        time.sleep(0.5)
+        print (y)
+        
+if 18 <= age <=99:
+        time.sleep(0.5)
+        Ans = input("Are you ready to play? Yes = 1 No = 0 ")
+        time.sleep(0.9)
+        AnsInt = 1 * int(Ans)
+        if AnsInt == 1:
+            print (x)
+            time.sleep(0.9)
+            print ("Player Stats")
+            time.sleep(0.9)
+            print ("Name: " + name)
+            time.sleep(0.9)
+            print ("Age: %s " % age,)
+            time.sleep(0.9)
+            print ("Status: Ready")
+            time.sleep(1)
+            Q1 = input("1. 1+1= ")
+            A1 = 1 * int(Q1)
+            time.sleep(0.9)
+            if A1 != 2:
+                print (z)
+                score = score + 0
+            elif A1 == 2:
+                print (w)
+                score = score + 1
+                time.sleep(0.9)
+            Q2 = input("2. 7 x 2 = ")
+            A2 = 1 * int(Q2)
+            if A2 != 14:
+                print (z)
+                score = score + 0
+            if A2 == 14:
+                print (w)
+                score = score + 1
+            Q3 = input("3. 10 x 10 = ")
+            A3 = 1*int(Q3)
+            if A3 == 100:
+                print (w)
+                score = score + 1
+            else:
+                print (z)
+            Q4 = int(input("4. 5 + 5 = "))
+            if Q4 == 10:
+                print (w)
+                score = score + 1
+            else:
+                print (z)
+            Q5 = str(input("5. What Animal Barks? "))
+            if Q5 == "dog" or "Dog" or "dogs" or "Dogs" :
+                print (w)
+                score = score + 1
+            else:
+                print (z)
+            Q5 = str(input("6. How Many Fingers on Each Hand? "))
+            if Q5 == "5" or "five" or "Five":
+                print (w)
+                score = score + 1
+            else:
+                print (z)
+            print ("Your score is %s" % score,"/6")
+        if AnsInt == 0:
+            print (y)
+
+
+
+
+
